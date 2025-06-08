@@ -42,9 +42,9 @@ jobs:
       - name: 🏷️ Build & Push Docker image to ECR
         uses: docker/build-push-action@v5
         with:
-          context: .
-          push: true
-          tags: ${{ secrets.ECR_REGISTRY }}/${{ secrets.ECR_REPOSITORY }}:latest
+            context: .
+            push: true
+            tags: 914181716691.dkr.ecr.ap-southeast-1.amazonaws.com/loganalyzer-demo-app-be:latest
 
       - name: ✅ Done
         run: echo "✅ Docker image pushed to ECR!"
